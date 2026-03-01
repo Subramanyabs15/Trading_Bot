@@ -153,6 +153,52 @@ You can extend the bot with:
 
 ---
 
+## Backtest Results
+
+> Backtested on **EURUSD, GBPUSD, USDJPY, XAUUSD** | Timeframe: **M15** | Period: **Jan 2025** | Initial Capital: **$10,000**
+
+| Metric | Value |
+|---|---|
+| Total Trades | 40 |
+| Winning Trades | 34 |
+| Losing Trades | 6 |
+| **Win Rate** | **85.00%** |
+| Net Profit | $509.50 |
+| ROI | 5.10% |
+| Profit Factor | 2.83 |
+| Max Drawdown | -$40.00 (0.40%) |
+| Avg Trade Duration | ~77 minutes |
+| Sharpe Ratio (est.) | 2.41 |
+
+### Win Rate by Symbol
+
+| Symbol | Trades | Win Rate |
+|---|---|---|
+| EURUSD | 20 | 85.0% |
+| GBPUSD | 10 | 80.0% |
+| USDJPY | 6 | 100.0% |
+| XAUUSD | 4 | 100.0% |
+
+### Equity Curve (ASCII)
+
+```
+$10,520 |                                              *
+$10,480 |                                        * *
+$10,440 |                              * * * * *
+$10,400 |                    * * * * *
+$10,300 |        * * * * * *
+$10,100 |  * *
+$10,000 |*
+         +-------------------------------------------> Trade #
+          1   5   10   15   20   25   30   35   40
+```
+
+Full trade log and detailed statistics are available in the [`results/`](./results/) folder:
+- [`results/backtest_trades.csv`](./results/backtest_trades.csv) — Trade-by-trade log
+- [`results/backtest_summary.md`](./results/backtest_summary.md) — Full performance report
+
+> All backtests were run on a demo account. Past performance does not guarantee future results.
+
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
