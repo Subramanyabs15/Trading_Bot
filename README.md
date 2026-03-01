@@ -1,6 +1,6 @@
-# Python MT5 Trading Bot
+# Python MT5 Hedging Trading Bot
 
-An automated trading bot built in Python on top of the **MetaTrader 5 (MT5)** platform. It connects to an MT5 terminal, reads live market data, opens and manages positions, and automatically adjusts SL/TP based on account performance.
+An automated **hedging** trading bot built in Python on top of the **MetaTrader 5 (MT5)** platform. It connects to an MT5 terminal, opens and manages **hedged positions** (simultaneous buy and sell on the same symbol), reads live market data, and automatically adjusts SL/TP based on account performance.
 
 ---
 
@@ -11,6 +11,7 @@ An automated trading bot built in Python on top of the **MetaTrader 5 (MT5)** pl
 - Fetches live account info: balance, equity, margin, and trade permissions
 - Scans available symbols — Forex, metals, crypto, indices, and more
 - Places **market orders** with custom symbol, lot size, order type, magic number, and comment
+- - Supports **hedging mode**: opens opposite-direction (buy + sell) positions on the same symbol simultaneously
 - Modifies open positions to update **Stop Loss** and **Take Profit** (`TRADE_ACTION_SLTP`)
 - Monitors open positions in a loop and detects when trades close
 - Simple **performance-driven adaptive logic**: adjusts TP on wins, SL on losses
